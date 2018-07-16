@@ -1,0 +1,31 @@
+.footer-form
+  .section-header.section-header--footer-form
+    h3 Заказать точный расчет
+    span
+    p Оставьте заявку - и мы рассчитаем точную стоимость вашего проекта
+  form.footer-form
+    .footer-form__field.form__field
+      input(type="text" id="footer-firstname" required)
+      label(for="footer-firstname") Имя*:
+
+    .footer-form__field.form__field
+      input(type="tel" id="footer-tel" required)
+      label(for="footer-tel") Телефон*:
+
+    .footer-form__field.form__field
+      input(type="email" id="footer-email")
+      label(for="footer-email") E-mail:
+
+    .footer-form__field.form__field
+      input(type="text" id="footer-url")
+      label(for="footer-url") Ссылка на сайт:
+
+    button(type="submit").footer-form__button
+      p Заказать аудит
+      svg(width="34" height="28")
+        use(xlink:href="#paper-plane")
+    .footer-form__checkbox
+      input(type="checkbox" id="footer-checkbox" requierd)
+      label(for="footer-checkbox")
+        span
+      p Я принимаю условия о персональных данных (<a href="#">подробнее</a>)

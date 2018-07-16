@@ -1,0 +1,11 @@
+import "./_scss/style.scss";
+import './_scss/swiper.css';
+import './js/sliders';
+import './js/forms';
+import './js/canvas';
+import './js/reqstBtn';
+import './js/rocketFly';
+import './js/planeFly';
+import './js/navScroll';
+import './js/headerStick';
+import './js/menuToggler';

@@ -1,0 +1,65 @@
+.serts {
+  width: 100%;
+  margin-bottom: 50px;
+
+  @include respond-to($w600) {
+    margin-bottom: 44px;
+  }
+
+  @include respond-to($w1024) {
+    margin-bottom: 60px;
+  }
+}
+
+.serts-slider {
+  position: relative;
+  width: 100%;
+}
+
+.serts__wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  width: 270px;
+
+  margin: 0 auto;
+
+  @include respond-to($w768) {
+    width: 570px;
+  }
+
+  @include respond-to($w1024) {
+    width: 870px;
+  }
+
+  @include respond-to($w1300) {
+    width: 1170px;
+  }
+}
+
+.serts-slider__slide {
+  display: block;
+  padding: 13px;
+
+  border: 2px solid #000;
+
+  img {
+    display: block;
+
+    height: auto;
+
+    margin: 0;
+
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+  }
+  &:hover {
+    img {
+      -webkit-filter: grayscale(0);
+	    filter: grayscale(0);
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.seo {
+  margin-bottom: 40px;
+  
+
+  @include respond-to($w1200) {
+    background: no-repeat;
+    background-image: url("./../img/techno.png");
+    background-size: 900px 700px;
+    background-position: 100% 40%;
+  }
+}
+
+.seo__wrap {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  width: calc(100% - 30px);
+
+  margin: 0 auto;
+
+  @include respond-to($w1024) {
+    flex-direction: row;
+    max-width: 1170px;
+  }
+}

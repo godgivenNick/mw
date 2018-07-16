@@ -1,0 +1,106 @@
+.footer-contacts {
+  order: 3;
+  display: flex;
+  justify-content: center;
+
+  padding-bottom: 40px;
+
+  @include respond-to($w600) {
+    order: 2;
+  }
+}
+
+.footer-contacts__item {
+  position: relative;
+  display: none;
+  align-items: center;
+  
+  color: #fff;
+  text-decoration: none;
+
+  width: 45px;
+  height: 45px;
+
+  p {
+    position: absolute;
+    width: 200px;
+    margin: 0 50px;
+    
+    font-size: 20px;
+    font-weight: 700;
+    
+    transition: 400ms;
+    opacity: 0;
+  }
+
+  &:nth-child(2) {
+    display: flex;
+  }
+
+  @include respond-to($w600) {
+    display: flex;
+
+    &:nth-child(2) {
+      margin: 0 50px;
+    }
+  }
+
+  @include respond-to($w1024) {
+    &:nth-child(1) {
+      p {
+        right: 100px;
+      }
+    }
+
+    &:nth-child(3) {
+      p {
+        left: 100px;
+      }
+    }
+    
+    &:hover {
+      &:nth-child(1) {
+        p {
+          opacity: 1;
+          right: 0px;
+        }
+      }
+
+      &:nth-child(3) {
+        p {
+          opacity: 1;
+          left: 0px;
+        }
+      }
+    }
+  }
+}
+
+.footer-contacts__icon {
+  position: relative;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+      pointer-events: none;
+
+  &::before {
+    content: '';
+    position: absolute;
+
+    width: 41px;
+    height: 41px;
+
+    background-color: #fff;
+
+    transform: rotate(45deg);
+  }
+
+  svg {
+    position: relative;
+    display: block;
+    fill: #000;
+
+    pointer-events: none;
+  }
+}

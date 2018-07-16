@@ -1,0 +1,48 @@
+.shapes
+  .shape-1
+  .shape-2
+  .shape-3
+footer.page-footer
+  .page-footer__wrap
+    .section-header.section-header--footer
+      h3 Калькулятор стоимости
+      span
+      p Для вашего удобства мы подготовили примерный подсчет стоимости разработки проекта с нуля
+
+    .page-footer__forms
+      include calc-form.pug
+      include footer-form.pug 
+
+    .page-footer__footer
+      .footer-mobile-contacts
+        a(href="tel:+79516597359")
+          svg(width="19" height="19")
+            use(xlink:href="#telephone")
+          p +7 (951) 659-73-59
+        a(href="mailto: info@module-web.ru") 
+          svg(width="20" height="15")
+            use(xlink:href="#envelope")
+          p info@module-web.ru
+      
+      .footer-copyright
+        a(href="#") Политика конфиденциальности сайта
+        p Module-Web <br> Все права защищены.
+
+      a.anchor#footer-cont-anchor
+      .footer-contacts
+        a.footer-contacts__item(href="mailto: info@module-web.ru")
+          p info@module-web.ru
+          .footer-contacts__icon
+            svg(width="23" height="18")
+              use(xlink:href="#envelope")
+
+        a.footer-contacts__item.footer-top-btn(href="#top-anchor")
+          .footer-contacts__icon
+            svg(width="23" height="28")
+              use(xlink:href="#up-arrow")
+
+        a.footer-contacts__item(href="mailto: info@module-web.ru")
+          .footer-contacts__icon
+            svg(width="22" height="22")
+              use(xlink:href="#telephone")
+          p +7 (951) 659-73-59

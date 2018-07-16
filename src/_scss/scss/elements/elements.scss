@@ -1,0 +1,226 @@
+// .anchor, .section-header, .section-header--footer, .section-header--footer-form,
+// .rect-btn, .slider-button-prev, .slider-button-next, .swiper-button-disabled,
+// .slider-button-next--offer, .slider-button-prev--offer
+
+
+
+.anchor {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+.section-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+
+  margin: 0 auto;
+  
+  h3 {
+    margin: 0;
+    margin-bottom: 16px;
+
+    font-family: $intro;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+
+  span {
+    display: block;
+
+    width: 44px;
+    height: 6px;
+    background-color: #000;
+  }
+
+  p {
+    max-width: 290px;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  @include respond-to($w600) {
+    p {
+      max-width: none;
+    }
+  }
+}
+
+.section-header--footer {
+  color: #fff;
+
+  span {
+    background-color: #fff;
+  }
+}
+
+.section-header--footer-form {
+  display: flex;
+  color: #fff;
+
+  span {
+    background-color: #fff;
+  }
+
+  @include respond-to($w1024){
+    display: none;
+  }
+}
+
+.rect-btn {
+  position: relative;
+  display: block;
+  width: 280px;
+  height: 48px;
+  
+  padding: 10px 10px;
+  padding-top: 13px;
+  margin: 0 auto;
+  
+  color: #000;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-align: center;
+	font-weight: 700;
+  text-decoration: none;
+
+	background: none;
+  
+  border: none;
+  
+  cursor: pointer;
+  
+  &::after, &::before {
+    content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+  
+    border: 2px solid #000;
+		transition: transform .2s; 
+  }
+	&:after {
+    transform: translate(4px, 4px);	
+  }
+	&:before {
+    transform: translate(-4px, -4px);
+  }
+	&:hover {
+    &:after, &:before {
+      transform: translate(0);
+    }
+  }
+}
+
+.slider-button-prev, .slider-button-next {
+  content: '';
+  position: absolute;
+  left: -18px;
+  bottom: 170px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  z-index: 20;
+
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 35px;
+    height: 35px;
+    
+    background-color: #fff;
+
+    border: 2px solid #000;
+
+    transform: rotate(-45deg);
+    transition: 300ms;
+  }
+
+  span {
+    display: block;
+    position: absolute;
+
+    margin: auto auto;
+
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    padding: 3px;
+
+    transform: rotate(135deg);
+  }
+
+  &:hover {
+    &::before {
+      transform: rotate(0deg);
+    }
+  }
+
+  @include respond-to($w768) {
+    left: -58px;
+  }
+  @include respond-to($w1200) {
+    left: -18px;
+  }
+  @include respond-to($w1920) {
+    left: -58px;
+  }
+}
+
+.slider-button-next {
+  left: auto;
+  right: -18px;
+
+  span {
+    transform: rotate(-45deg);
+  }
+
+  @include respond-to($w768) {
+    right: -58px;
+  }
+
+  @include respond-to($w1200) {
+    right: -18px;
+  }
+  @include respond-to($w1920) {
+    right: -58px;
+  }
+}
+
+.swiper-button-disabled {
+  opacity: 0.2;
+}
+
+.slider-button-next--offer, .slider-button-prev--offer {
+  display: none;
+  
+  @include respond-to($w600) {
+    display: flex;
+    left: 0;
+    right: 0;
+    bottom: 40%;
+  }
+
+  @include respond-to($w1024) {
+    display: none;
+  }
+}
+
+.slider-button-prev--offer {
+  right: auto;
+  left: 20px;
+}
+
+.slider-button-next--offer {
+  left: auto;
+  right: 20px;
+}
