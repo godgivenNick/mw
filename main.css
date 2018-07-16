@@ -1227,7 +1227,11 @@ body {
   margin: 0 auto; }
 
 .svg-rocket {
-  position: relative; }
+  fill: red;
+  position: relative;
+  bottom: 50px;
+  right: 30px;
+  z-index: 10; }
 
 .proc__list {
   position: absolute;
@@ -1674,7 +1678,9 @@ body {
   -ms-flex-align: center;
       align-items: center;
   color: #fff;
-  text-decoration: none; }
+  text-decoration: none;
+  width: 45px;
+  height: 45px; }
   .footer-contacts__item p {
     position: absolute;
     width: 200px;
@@ -1711,7 +1717,8 @@ body {
   -ms-flex-align: center;
       align-items: center;
   -ms-flex-pack: center;
-      justify-content: center; }
+      justify-content: center;
+  pointer-events: none; }
   .footer-contacts__icon::before {
     content: '';
     position: absolute;
@@ -1722,7 +1729,8 @@ body {
   .footer-contacts__icon svg {
     position: relative;
     display: block;
-    fill: #000; }
+    fill: #000;
+    pointer-events: none; }
 
 /**
  * Swiper 4.3.3
