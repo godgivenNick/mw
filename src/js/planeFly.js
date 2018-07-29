@@ -1,5 +1,5 @@
 const seoBtn = document.querySelector('.seo-form__button');
-const fotterBtn = document.querySelector('.footer-form__button');
+const footerBtn = document.querySelector('.footer-form__button');
 
 function textChange(string) {
   string.toLowerCase() === "заказать аудит" ? string = "заявка отправлена" : string = "заказать аудит";
@@ -13,4 +13,4 @@ function btnToggle(e){
 }
 
 seoBtn.addEventListener('click', btnToggle);
-fotterBtn.addEventListener('click', btnToggle);
+footerBtn.addEventListener('click', btnToggle);

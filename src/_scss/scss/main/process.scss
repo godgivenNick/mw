@@ -13,17 +13,36 @@
   display: flex;
 
   width: 1170px;
+  height: 350px;
 
   margin: 0 auto;
 }
 
+.proc__white-block {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: -45px;
+  bottom: 0;
+
+  background-color: #fff;
+
+  z-index: 5;
+}
+
+.proc__path {
+  margin-top: 40px;
+}
+
 
 .svg-rocket {
-  fill: red;
+  fill: #000;
   position: relative;
   bottom: 50px;
   right: 30px;
   z-index: 10;
+
+  transform: rotate(45deg);
 }
 
 .proc__list {
@@ -32,7 +51,7 @@
   display: flex;
   justify-content: flex-start;
 
-  top: 0;
+  top: 40px;
   right: 0;
   left: -35px;
   bottom: 0;

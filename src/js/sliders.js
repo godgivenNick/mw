@@ -52,7 +52,7 @@ function initSertsSwiper() {
 }
 
 
-function refreshSliders() {  
+export default function refreshSliders() {  
   initOfferSwiper();
   initSertsSwiper();
   if (window.matchMedia('(min-width: 1024px)').matches) {
@@ -62,5 +62,3 @@ function refreshSliders() {
 
 initOfferSwiper();
 initSertsSwiper();
-
-window.addEventListener('resize', refreshSliders);

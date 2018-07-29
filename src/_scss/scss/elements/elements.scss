@@ -1,7 +1,13 @@
-// .anchor, .section-header, .section-header--footer, .section-header--footer-form,
+// .trigger, .anchor, .section-header, .section-header--footer, .section-header--footer-form,
 // .rect-btn, .slider-button-prev, .slider-button-next, .swiper-button-disabled,
 // .slider-button-next--offer, .slider-button-prev--offer
 
+
+.trigger {
+  position: fixed;
+  top: 50%;
+  right: 0;
+}
 
 
 .anchor {

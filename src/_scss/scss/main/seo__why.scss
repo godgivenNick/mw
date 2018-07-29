@@ -9,7 +9,7 @@
     order: 2;
     align-self: flex-end;
 
-    margin-bottom: 0;
+    margin-bottom: 10px;
   }
 }
 
@@ -36,6 +36,10 @@
   display: flex;
   width: 100%;
 
+  svg {
+    pointer-events: none;
+  }
+
   &:nth-child(2n) {
     background-color: #000;
 
@@ -44,10 +48,7 @@
     .seo-profit__item-wrap > .seo-profit__img {
       order: 2;
 
-      height: 86px;
-      width: 86px;
-
-      margin-right: 12px;
+      margin-right: 0;
       margin-left: 25px;
 
       &::before {
@@ -57,16 +58,6 @@
 
       svg {
         fill: #fff;
-      }
-
-      &:hover {
-        &::before {
-          border: none;
-          background-color: #fff;
-        }
-        svg {
-          fill: #000;
-        }
       }
     }
   }
@@ -79,7 +70,6 @@
       background-color: #fff;
     
      .seo-profit__item-wrap {
-        
         .seo-profit__img {
           order: 1;
 
@@ -95,43 +85,30 @@
           fill: #000;
         }
 
-        &:hover {
-          &::before {
-            border: none;
-            background-color: #000;
-          }
-          svg {
-            fill: #fff;
-          }
-        }
-
         }
         .seo-profit__text {
           order: 2;
         }
       }
     }
+  }
 
-    &:nth-child(3n+1) {
+  @include respond-to($w1024) {
+    background-color: transparent;
+
+    &:nth-child(2n) {
+      background-color: transparent;
       
       .seo-profit__item-wrap > .seo-profit__img {
-
-        &::before {
-          border: 1px solid #fff;
-          background-color: #000;
-        }
-
-        svg {
-          fill: #fff;
-        }
-
-        &:hover {
+        
+        &:hover {    
           &::before {
-            border: 1px solid #000;
-            background-color: #fff;
+            background-color: #000;
+            
           }
+
           svg {
-            fill: #000;
+            fill: #fff;
           }
         }
       }
@@ -162,11 +139,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 86px;
-  width: 86px;
+  height: 96px;
+  width: 96px;
 
   margin-right: 25px;
-  margin-left: 12px;
+  margin-left: 0;
   margin-top: 5px;
 
   &::before {
@@ -176,24 +153,51 @@
 
     border: 1px solid #000;
     transform: rotate(-45deg);
-    transition: 300ms;
   }
-
+  
   svg {
     position: absolute;
     display: block;
     fill: #000;
-    transition: 300ms;
   }
-
-  &:hover {
-    &::before {
-      transform: rotate(0deg);
-      background-color: #000;
-      border: none;
+  
+  @include respond-to($w1024) {
+    &::before, svg {
+      transition: 300ms;   
     }
+    
+    &:hover {
+      &::before {
+        will-change: transform, background-color;
+        transform: rotate(0deg);
+        // border: none;
+        background-color: #000;
+      }
+      svg {
+        fill: #fff;
+      }
+    }
+  }
+}
+
+.seo-profit__black {
+  @include respond-to($w1024) {
+    &::before {
+      background-color: #000 !important;
+    }
+
     svg {
-      fill: #fff;
+      fill: #fff!important;
+    }
+
+    &:hover {
+      &::before {
+        background-color: #fff !important;
+      }
+
+      svg {
+        fill: #000 !important;
+      }
     }
   }
 }

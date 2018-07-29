@@ -1,12 +1,16 @@
 .seo {
   margin-bottom: 40px;
-  
+
+  @include respond-to($w1024) {
+    padding-top: 160px;
+
+  }
 
   @include respond-to($w1200) {
     background: no-repeat;
     background-image: url("./../img/techno.png");
     background-size: 900px 700px;
-    background-position: 100% 40%;
+    background-position: 100% 350%;
   }
 }
 
