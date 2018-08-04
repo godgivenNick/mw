@@ -522,7 +522,8 @@ body {
     background-color: #fff; }
 
 .info {
-  position: relative; }
+  position: relative;
+  background: url(./img/canvas.png); }
 
 .info__wrap {
   position: relative;
@@ -586,8 +587,12 @@ body {
   right: 0;
   z-index: 1; }
   .info-canvas canvas {
+    display: none;
     width: 100% !important;
     height: 100% !important; }
+    @media only screen and (min-width: 1024px) {
+      .info-canvas canvas {
+        display: block; } }
 
 @keyframes spin {
   from {
@@ -657,6 +662,7 @@ body {
       width: 233px !important; } }
 
 .our-offer__picture {
+  will-change: background-image background-position;
   position: relative;
   display: -ms-flexbox;
   display: flex;
@@ -678,6 +684,7 @@ body {
     border-radius: 50%;
     z-index: 1; }
   .our-offer__picture::before {
+    will-change: box-shadow;
     content: '';
     position: absolute;
     width: 115px;
