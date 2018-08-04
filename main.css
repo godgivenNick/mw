@@ -270,6 +270,8 @@ body {
   .page-header__contacts .page-header__tel {
     display: -ms-flexbox;
     display: flex; }
+    .page-header__contacts .page-header__tel svg {
+      fill: #fff; }
   @media only screen and (min-width: 768px) {
     .page-header__contacts a {
       display: -ms-flexbox;
@@ -846,14 +848,7 @@ body {
     .port__item {
       width: 25%;
       height: 22vw;
-      perspective: none; }
-      .port__item:hover > .port__flipper {
-        transform: none; }
-        .port__item:hover > .port__flipper > .port__front .port__main-img {
-          top: -22vw; }
-        .port__item:hover > .port__flipper > .port__front .port__include {
-          top: 0;
-          height: 100%; } }
+      perspective: none; } }
 
 .port__flipper {
   width: 100%;
@@ -866,7 +861,7 @@ body {
   pointer-events: none; }
   @media only screen and (min-width: 1024px) {
     .port__flipper {
-      transform-style: none; } }
+      transform-style: flat; } }
 
 .port__front, .port__back {
   width: 100%;
@@ -897,6 +892,7 @@ body {
       display: none; } }
 
 .port__main-img {
+  will-change: top;
   position: absolute;
   left: 0;
   top: 0;
@@ -911,6 +907,7 @@ body {
   pointer-events: none; }
   @media only screen and (min-width: 1024px) {
     .port__include {
+      will-change: top;
       position: absolute;
       left: 0;
       top: 22vw;
